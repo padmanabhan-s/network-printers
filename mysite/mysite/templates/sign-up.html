@@ -1,0 +1,97 @@
+{% extends "layouts/base.html" %}
+
+{% block stylesheet %}
+
+<link rel="stylesheet" href="/static/assets/sign_up.css">
+{% endblock stylesheet %}
+ 
+{% block title %} Book Now {% endblock title %}
+
+{% block pageintro %}
+        <h1 class="text-box">Sign Up</h1>
+{% endblock pageintro %}
+
+{% block content %}
+<div class="container">
+    <form id="form1">
+      <h3>CREATE ACCOUNT</h3>
+      <input type="text" placeholder="Name" required>
+      <input type="text" placeholder="Email" required>
+      <div class="btn-box">
+        <button type="button" id="Next1">Next</button>
+      </div>
+    </form>
+    <form id="form2">
+        <h3>PET DETAILS</h3>
+        <input type="text" placeholder="Name" >
+        <input type="text" placeholder="Gender" >
+        <div class="btn-box" style="margin: 10 auto; width: 290px; text-align: left;">
+            <button type="button" id="Back1">Back</button>
+            <button type="button" id="Next2">Next</button>
+        </div>
+      </form>
+      <form id="form3">
+        <h3>PET DETAILS 2</h3>
+        <input type="text" placeholder="Name" >
+        <input type="text" placeholder="Gender" >
+        <div class="btn-box" style="margin: 10 auto; width: 290px; text-align: left;">
+            <button type="button" id="Back2">Back</button>
+            <button type="button">Submit</button>
+        </div>
+      </form>
+
+      <div class="step-row">
+          <div id="progress"></div>
+          <div class="step-col"><small>Step 1</small></div>
+          <div class="step-col"><small>Step 2</small></div>
+          <div class="step-col"><small>Step 3</small></div>
+      </div>
+</div>
+
+
+{% endblock content %}
+
+
+
+{% block javascripts %}
+<script>
+    var form1 = document.getElementById("form1");
+    var form2 = document.getElementById("form2");
+    var form3 = document.getElementById("form3");
+
+    var Next1 = document.getElementById("Next1");
+    var Next2= document.getElementById("Next2");
+    var Back1 = document.getElementById("Back1");
+    var Back2 = document.getElementById("Back2");
+
+    var progress = document.getElementById("progress");
+
+    Next1.onclick = function(){
+        form1.style.left = "-450px";
+        form2.style.left = "40px";
+        progress.style.width = "240px";
+    }
+    Back1.onclick = function(){
+        form1.style.left = "40px";
+        form2.style.left = "450px";
+        progress.style.width = "120px";
+
+    }
+
+    Next2.onclick = function(){
+        form2.style.left = "-450px";
+        form3.style.left = "40px";
+        progress.style.width = "360px";
+
+    }
+    Back2.onclick = function(){
+        form2.style.left = "40px";
+        form3.style.left = "450px";
+        progress.style.width = "240px";
+
+    }
+</script>
+
+{% endblock javascripts %}
+</body>
+</html>

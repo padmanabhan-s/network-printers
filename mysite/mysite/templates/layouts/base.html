@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>NETWORK PRINTERS - {% block title %}{% endblock title%}</title></title>
+    <link rel="stylesheet" href="static/assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" >
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+{% block stylesheet %}{% endblock stylesheet %}
+
+
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src ="static/assets/images/pg-logo.png" ></a>
+            <div class="nav-links" id=navLinks>
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="{% url 'index.html' %}">HOME</a></li>
+                    <li><a href="">LOG IN</a></li>
+                    <li><a href="{% url 'sign-up.html' %}">SIGN UP</a></li>
+                    
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+        {% block pageintro %}{% endblock pageintro %}
+        
+    </section>
+{% block content %}{% endblock content %}
+
+
+<!-----------------Call to action----------->
+<section class="cta">
+    <h1>Book now</h1>
+    <a href="" class="hero-btn">contact us</a>
+</section>
+
+<!-----------------Footer ------------------>
+<section class="footer">
+    <h4>About us</h4>
+    <p>Sample text about us</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+    <p>Made with <i class="fa fa-heart-o"></i> by PG Petgroomers</p>
+</section>
+
+
+
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+{% block javascripts %}{% endblock javascripts %}
+
+</body>
+</html>
