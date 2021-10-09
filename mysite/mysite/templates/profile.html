@@ -1,0 +1,65 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Blank Page {% endblock title %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<a href="/" class="btn btn-primary"  >Home</a>
+<a href="{{request.META.HTTP_REFERER|escape}}" class="btn btn-primary"  >Back</a>
+<br/>
+<div class="bgc-white p-20 bd">
+          
+    <img class="profile-pic" src="/static/assets/static/images/profile.png" alt=""  widt='100' height="100" >
+    
+    <h6 class="c-grey-900">Contact Details</h6>
+    <div class="mT-30">
+    <form id="profile_update_form" name="profile_update_form" action = "" method= "POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+    <div>
+        
+        <div class="form-group">
+            <label >First Name</label><br/>
+            {{form.first_name}}
+        </div>
+        <div class="form-group">
+            <label >Last Name</label><br/>
+            {{form.last_name}}
+        </div>
+        <div class="form-group">
+            <label >Designation</label><br/>
+            {{form.designation}}
+        </div>
+        <div class="form-group">
+            <label >Company</label><br/>
+            {{form.college}}
+        </div>
+        <div class="form-group">
+            <label >Phone Number</label><br/>
+            {{form.phone_number}}
+        </div>
+        <div>
+            <label >Email address</label><br/>
+            {{ form.mail_id}}
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <br/>
+        <div>
+            <label >Designation</label><br/>
+            {{ form.designation}}
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <br/>
+    </div> 
+
+        <button type="submit" style="width:100%" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

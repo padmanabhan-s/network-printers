@@ -1,0 +1,79 @@
+
+      <!-- #Left Sidebar ==================== -->
+      <div class="sidebar ">
+        <div class="sidebar-inner">
+          <!-- ### $Sidebar Header ### -->
+          <div class="sidebar-logo">
+            <div class="peers ai-c fxw-nw">
+              <div class="peer peer-greed">
+                <a class="sidebar-link td-n" href="{% url 'about-us.html' %}">
+                  <div class="peers ai-c fxw-nw">
+                    <div class="peer">
+                      <div class="logo">
+                        <img src="/static/assets/static/images/logo3.png" alt="" height="50" width="50">
+                      </div>
+                    </div>
+                    <div class="peer peer-greed">
+                      <h5 class="lh-1 mB-0 logo-text">Network Printers</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="peer">
+                <div class="mobile-toggle sidebar-toggle">
+                  <a href="" class="td-n">
+                    <i class="ti-arrow-circle-left"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ### $Sidebar Menu ### -->
+          <ul class="sidebar-menu scrollable pos-r ">
+            <li class="nav-item mT-30 actived ">
+              <a class="sidebar-link " href="/">
+                <span class="icon-holder">
+                  <i class="c-blue-500 ti-home"></i>
+                </span>
+                <span class="title">Dashboard</span>
+              </a>
+            </li>
+            
+           
+            <li class="nav-item">
+              <a class="sidebar-link" href="{% url 'feedback-form.html' %}">
+                <span class="icon-holder">
+                  <i class="c-green-500 ti-help"></i>
+                </span>
+                <span class="title">Feedback</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="sidebar-link" href="{% url 'about-us.html' %}">
+                <span class="icon-holder">
+                  <i class="c-pink-500 ti-comments-smiley"></i>
+                </span>
+                <span class="title">Who am I?</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="sidebar-link" href="{% url 'privacy-policy.html' %}">
+                <span class="icon-holder">
+                  <i class="c-black-500 ti-eye"></i>
+                </span>
+                <span class="title">Privacy Policy</span>
+              </a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="sidebar-link" href="{% url 'logout' %}" >
+                <span class="icon-holder">
+                    <i class="ti-power-off mR-10"></i>
+                  </span>
+                <span class="title">Logout</span>
+              </a>
+            </li>            
+          </ul>
+        </div>
+      </div>
