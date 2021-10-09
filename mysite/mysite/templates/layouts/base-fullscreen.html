@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <title>
-      VISHORE.COM - {% block title %}{% endblock %} | Leads For Business Builders
+      Django Adminator - {% block title %}{% endblock %} | AppSeed
     </title>
 
     <style>
@@ -55,29 +55,15 @@
         }
       }
     </style>
-    <link href="/static/assets/style.css" rel="stylesheet">
+
+    <link href="/static/assets/style2.css" rel="stylesheet">
 
     <!-- Specific Page CSS goes HERE -->
     {% block stylesheets %}{% endblock stylesheets %}
 
   </head>
   <body class="app">
-    <!-- @TOC -->
-    <!-- =================================================== -->
-    <!--
-      + @Page Loader
-      + @App Content
-          - #Left Sidebar
-              > $Sidebar Header
-              > $Sidebar Menu
 
-          - #Main
-              > $Topbar
-              > $App Screen Content
-    -->
-
-    <!-- @Page Loader -->
-    <!-- =================================================== -->
     <div id="loader">
       <div class="spinner"></div>
     </div>
@@ -91,27 +77,9 @@
       });
     </script>
 
-    <!-- @App Content -->
-    <!-- =================================================== -->
-    <div>
+    <div class="peers ai-s fxw-nw h-100vh">
 
-      {% include 'includes/sidebar.html' %}
-
-      <!-- #Main ============================ -->
-      <div class="page-container">
-
-        {% include 'includes/navigation.html' %}
-
-        <!-- ### $App Screen Content ### -->
-        <main class="main-content bgc-grey-100">
-          <div id="mainContent">
-
-            {% block content %}{% endblock content %}  
-          
-          </div>
-        </main>
-
-        {% include 'includes/footer.html' %}
+        {% block content %}{% endblock content %}  
 
     </div>
   

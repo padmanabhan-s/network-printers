@@ -106,6 +106,16 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+# Email services
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.hostinger.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "info@leadsforbusinessbuilders.com" #os.environ.get('EMAIL_ID') 
+DEFAULT_FROM_EMAIL  = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = "Vishore@1992" #os.environ.get('EMAIL_PW')
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 

@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from networkprinters import urls
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("",include(urls))
+    path('admin/', admin.site.urls),          # Django admin route
+    path('admin' , admin.site.urls),          # Django admin route 
+    path('', include("authentication.urls")), # Auth routes - login / register
+    path('', include("networkprinters.urls")),
 ]
