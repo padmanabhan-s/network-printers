@@ -30,7 +30,8 @@ SECRET_KEY = 'django-insecure--fjc4gm#286dtg5&i58nf9s%1=ok8!&os$6xdl*o0*a-_^@4uf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['nework-printers.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS =['*'] 
+
 
 
 
